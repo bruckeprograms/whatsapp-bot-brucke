@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const VERIFY_TOKEN = "brucke123";
-const ACCESS_TOKEN = "EAAOOoHrGr4wBRh3o8eSANpfWkZCF0xgrXPZAJr73yGjnkGphnmcvrkk7iEoTlMZC8CgsfLPpizRPAlydNcMNN6r3HhiWNgnsakL7rLoLIQZB5S8MJqLVu25kOF1E6xNRQ0Dt2anccZA9j7CdjGqJsLNkTOXzltMoZAbeLApmZCqsL6UQAeA6AWjPQrNPyeaqsg6QQZDZD";
+const ACCESS_TOKEN = "EAAOOoHrGr4wBRg6ccFBF8HvxH1GfT0YimsoYZANfVf1hJwZB7T6ei9MkjlikoP9lZAObMY6LkEwiYUUMWSNZA4BGSLihstmdUBw8HHbBXTfy8O2ZCxqRHcjVZCHpiDLpZA0LDNYvjeCEbzZC4AzKI0FeBnOCBsHYkx45iZA0JyezpIojiu3fFeIdETwPXwa4na9FftwZDZD";
 const PHONE_NUMBER_ID = "1171925102662702";
 
 app.get("/", (req, res) => {
