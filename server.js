@@ -24,30 +24,17 @@ app.get("/webhook", (req, res) => {
   res.sendStatus(403);
 });
 
+const content = require("./bot-content.json");
+
 function obtenerRespuesta(texto) {
+
   const mensaje = texto.trim().toLowerCase();
 
-  if (mensaje === "1") {
-    return "🇺🇸 *Work & Travel USA*\n\nPrograma para estudiantes universitarios que desean trabajar legalmente en Estados Unidos durante sus vacaciones y vivir una experiencia cultural internacional.\n\nRequisitos generales:\n✅ Ser estudiante universitario\n✅ Tener 18 años o más\n✅ Inglés intermedio\n✅ Disponibilidad para temporada de verano o invierno\n\nEscribe *asesor* si deseas que alguien de Brücke te contacte.";
-  }
-
-  if (mensaje === "2") {
-    return "💼 *Internship USA*\n\nPrograma dirigido a estudiantes avanzados o recién egresados que desean realizar prácticas profesionales en Estados Unidos.\n\nIdeal para áreas como hotelería, gastronomía, turismo, administración y más.\n\nEscribe *asesor* si deseas recibir orientación personalizada.";
-  }
-
-  if (mensaje === "3") {
-    return "📈 *Training USA*\n\nPrograma para profesionales o egresados que buscan entrenamiento laboral en Estados Unidos para fortalecer su experiencia internacional.\n\nEscribe *asesor* si deseas que revisemos tu perfil.";
-  }
-
-  if (mensaje === "4") {
-    return "📝 *Evaluación de inglés Brücke*\n\nLa evaluación nos ayuda a conocer tu nivel de inglés y orientarte hacia el programa más adecuado.\n\nUn asesor de Brücke puede indicarte el siguiente paso.";
-  }
-
   if (mensaje.includes("asesor")) {
-    return "Perfecto 😊 Un asesor de Brücke revisará tu mensaje y te contactará pronto.\n\nMientras tanto, puedes escribirnos tu nombre completo y el programa de tu interés.";
+    return content["asesor"];
   }
 
-  return "Hola 👋 Soy el asistente virtual de Brücke Programs.\n\n¿Te interesa?\n\n1️⃣ Work & Travel USA\n2️⃣ Internship USA\n3️⃣ Training USA\n4️⃣ Evaluación de inglés\n\nResponde con el número de la opción.";
+  return content[mensaje] || content["menu"];
 }
 
 async function enviarMensaje(to, body) {
