@@ -36,21 +36,26 @@ function obtenerSesion(numero) {
       estado: "menu_principal",
       programa: null,
       modoAsesor: false,
-      ultimaInteraccion: ahora,
-      errores: 0
+      ultimaInteraccion: 0,
+      errores: 0,
+      primerContacto: true
     };
   }
 
   const sesion = sesiones[numero];
 
-  if (ahora - sesion.ultimaInteraccion > DOS_HORAS) {
+  if (sesion.ultimaInteraccion && ahora - sesion.ultimaInteraccion > DOS_HORAS) {
     sesion.estado = "menu_principal";
     sesion.modoAsesor = false;
     sesion.errores = 0;
+    sesion.primerContacto = true;
   }
 
-  sesion.ultimaInteraccion = ahora;
   return sesion;
+}
+
+function actualizarTiempo(sesion) {
+  sesion.ultimaInteraccion = Date.now();
 }
 
 function esReset(texto) {
@@ -70,15 +75,28 @@ function procesarTexto(numero, texto) {
     sesion.estado = "menu_principal";
     sesion.modoAsesor = false;
     sesion.errores = 0;
+    sesion.primerContacto = false;
+    actualizarTiempo(sesion);
+    return content["menu_principal"].mensaje;
+  }
+
+  if (sesion.primerContacto) {
+    sesion.estado = "menu_principal";
+    sesion.modoAsesor = false;
+    sesion.errores = 0;
+    sesion.primerContacto = false;
+    actualizarTiempo(sesion);
     return content["menu_principal"].mensaje;
   }
 
   if (sesion.modoAsesor) {
+    actualizarTiempo(sesion);
     return null;
   }
 
   if (mensaje.includes("asesor")) {
     sesion.modoAsesor = true;
+    actualizarTiempo(sesion);
     return content["asesor"]?.mensaje || content["asesor"];
   }
 
@@ -86,13 +104,22 @@ function procesarTexto(numero, texto) {
 
   if (!estadoActual) {
     sesion.estado = "menu_principal";
+    actualizarTiempo(sesion);
     return content["menu_principal"].mensaje;
   }
 
   const siguienteEstado = estadoActual.opciones?.[mensaje];
 
   if (!siguienteEstado) {
+    // Si está en inicio, cualquier mensaje abre el menú principal.
+    if (sesion.estado === "menu_principal") {
+      sesion.errores = 0;
+      actualizarTiempo(sesion);
+      return content["menu_principal"].mensaje;
+    }
+
     sesion.errores += 1;
+    actualizarTiempo(sesion);
 
     if (sesion.errores >= 3) {
       sesion.modoAsesor = true;
@@ -109,6 +136,7 @@ function procesarTexto(numero, texto) {
 
   if (!nuevoEstado) {
     sesion.estado = "menu_principal";
+    actualizarTiempo(sesion);
     return content["menu_principal"].mensaje;
   }
 
@@ -122,8 +150,10 @@ function procesarTexto(numero, texto) {
 
   if (nuevoEstado.fin) {
     sesion.estado = "menu_principal";
+    sesion.primerContacto = true;
   }
 
+  actualizarTiempo(sesion);
   return nuevoEstado.mensaje;
 }
 
@@ -159,8 +189,11 @@ app.post("/webhook", async (req, res) => {
       } else {
         console.log("Archivo o multimedia recibido:", message.type);
         respuesta = respuestaArchivo();
+
         const sesion = obtenerSesion(from);
         sesion.modoAsesor = true;
+        sesion.primerContacto = false;
+        actualizarTiempo(sesion);
       }
 
       if (respuesta) {
