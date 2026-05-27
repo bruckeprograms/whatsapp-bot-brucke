@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const VERIFY_TOKEN = "brucke123";
-const ACCESS_TOKEN = "PEGA_AQUI_TU_TOKEN_TEMPORAL";
+const ACCESS_TOKEN = "EAAOOoHrGr4wBRpiM7Y9xkbrxMmfyby6dWQrJnRep3c5mpMfwKrke6YZCYWb5KphegkPlvuGv6C23Pg0plhlyw84q0Xrik3ipF3HketcUZCfAWAZCQzrOo0joCJ7mBgpbGfcPxFYZBPZAh92vIm9B3Hb2DPB07dkqKmo1nudFJZBMz5BrmI6csKtnnwj7yZBrdhsjzcPnwLCTzf8fXXvolGYZCZC7u9LMDkrHFLc813wrkRRqGxgDh8VeRqifMZCPqiysWtd1RjaJw9KKjQcibkJ1BrZCpsT5xfETPYuTTW9";
 const PHONE_NUMBER_ID = "1171925102662702";
 
 const sesiones = {};
