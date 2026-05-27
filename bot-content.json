@@ -1,441 +1,413 @@
 {
-  "settings": {
-    "human_silence_minutes": 120,
-    "unknown_message": "😅 No logré entender tu mensaje.\n\nSi deseas volver al inicio, escribe *menu* y con gusto te ayudaremos.",
-    "too_many_unknown": "😊 Parece que necesitas ayuda adicional.\n\n1️⃣ Hablar con un asesor\n2️⃣ Volver al menú principal",
-    "media_message": "📎 Hemos recibido un archivo, documento o multimedia.\n\nPara asegurar una correcta revisión, los documentos, comprobantes o archivos deben enviarse por uno de estos medios:\n\n📩 Correo:\ninfo@bruckeprograms.com\n\n📲 WhatsApp directo con tu asesor personal de Brücke, si ya tienes uno asignado.\n\nSi aún no tienes asesor asignado, escribe *asesor* y te orientaremos.",
-    "audio_message": "🎙️ Hemos recibido un audio.\n\nPara asegurar una correcta revisión, por favor comunícate con tu asesor personal de Brücke o envía tu consulta a:\n\n📩 info@bruckeprograms.com\n\nSi aún no tienes asesor asignado, escribe *asesor* y te orientaremos."
-  },
-  "global_commands": {
-    "menu": "menu_principal",
-    "menú": "menu_principal",
-    "inicio": "menu_principal",
-    "reiniciar": "menu_principal",
-    "volver al inicio": "menu_principal",
-    "asesor": "asesor"
-  },
-  "states": {
-    "menu_principal": {
-      "message": "👋 Hola, bienvenido(a) a Brücke Programs 🌎\n\n¿En qué podemos ayudarte hoy?\n\n1️⃣ Quiero información sobre los programas\n2️⃣ Quiero inscribirme\n3️⃣ Quiero hablar con un asesor\n4️⃣ Ya soy participante y necesito orientación\n5️⃣ Otros temas",
-      "options": {
-        "1": "informacion",
-        "2": "inscripcion",
-        "3": "asesor",
-        "4": "participante",
-        "5": "otros"
-      }
-    },
-    "informacion": {
-      "message": "🌎 ¿Sobre qué programa deseas informarte?\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Camp Programs 🏕️\n5️⃣ Aún no estoy seguro\n6️⃣ Volver",
-      "options": {
-        "1": "informacion_wat",
-        "2": "informacion_internship",
-        "3": "informacion_training",
-        "4": "informacion_camp",
-        "5": "informacion_no_seguro",
-        "6": "menu_principal"
-      }
-    },
-    "informacion_no_seguro": {
-      "message": "😊 No te preocupes. Muchas personas aún no saben qué programa internacional se adapta mejor a su perfil.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "informacion"
-      }
-    },
-    "informacion_wat": {
-      "program": "Work & Travel USA",
-      "message": "🇺🇸 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es el programa Work & Travel\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
-      "options": {
-        "1": "wat_que_es",
-        "2": "wat_requisitos",
-        "3": "charla",
-        "4": "informacion"
-      }
-    },
-    "wat_que_es": {
-      "message": "🌎 Work & Travel USA es un programa de intercambio cultural que permite a estudiantes universitarios trabajar temporalmente en Estados Unidos mientras viven una experiencia internacional, mejoran su inglés y conocen nuevas culturas.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
-      "options": {
-        "1": "wat_requisitos",
-        "2": "charla",
-        "3": "informacion_wat"
-      }
-    },
-    "wat_requisitos": {
-      "message": "🇺🇸 Para participar en Work & Travel USA generalmente necesitas:\n\n✅ Tener entre 18 y 28 años\n✅ Estar matriculado(a) en universidad o instituto superior\n✅ Tener un nivel intermedio de inglés o superior\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
-      "options": {
-        "1": "wat_cumple",
-        "2": "wat_no_cumple",
-        "3": "wat_no_seguro",
-        "4": "informacion_wat"
-      }
-    },
-    "wat_cumple": {
-      "message": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para el programa Work & Travel USA.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "wat_requisitos"
-      }
-    },
-    "wat_no_cumple": {
-      "message": "🌎 No te preocupes. Existen otros programas internacionales que podrían adaptarse mejor a tu perfil.\n\n¿Sobre cuál te gustaría recibir información?\n\n1️⃣ Internship 🌍\n2️⃣ Training 💼\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
-      "options": {
-        "1": "informacion_internship",
-        "2": "informacion_training",
-        "3": "informacion_camp",
-        "4": "informacion_wat"
-      }
-    },
-    "wat_no_seguro": {
-      "message": "😊 No te preocupes. Muchos participantes tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "wat_requisitos"
-      }
-    },
-    "informacion_internship": {
-      "program": "Internship",
-      "message": "🌍 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es el programa Internship\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
-      "options": {
-        "1": "internship_que_es",
-        "2": "internship_requisitos",
-        "3": "charla",
-        "4": "informacion"
-      }
-    },
-    "internship_que_es": {
-      "message": "🌍 Internship es un programa internacional que permite realizar prácticas profesionales en empresas del extranjero relacionadas con tu carrera o experiencia, mientras desarrollas habilidades y fortaleces tu perfil profesional.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
-      "options": {
-        "1": "internship_requisitos",
-        "2": "charla",
-        "3": "informacion_internship"
-      }
-    },
-    "internship_requisitos": {
-      "message": "🌍 Para participar en Internship generalmente necesitas:\n\n✅ Tener estudios universitarios o experiencia relacionada al área\n✅ Contar con inglés intermedio o superior\n✅ Tener interés en adquirir experiencia profesional internacional\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
-      "options": {
-        "1": "internship_cumple",
-        "2": "internship_no_cumple",
-        "3": "internship_no_seguro",
-        "4": "informacion_internship"
-      }
-    },
-    "internship_cumple": {
-      "message": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Internship.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "internship_requisitos"
-      }
-    },
-    "internship_no_cumple": {
-      "message": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Training 💼\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
-      "options": {
-        "1": "informacion_wat",
-        "2": "informacion_training",
-        "3": "informacion_camp",
-        "4": "informacion_internship"
-      }
-    },
-    "internship_no_seguro": {
-      "message": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "internship_requisitos"
-      }
-    },
-    "informacion_training": {
-      "program": "Training",
-      "message": "💼 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es el programa Training\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
-      "options": {
-        "1": "training_que_es",
-        "2": "training_requisitos",
-        "3": "charla",
-        "4": "informacion"
-      }
-    },
-    "training_que_es": {
-      "message": "💼 Training es un programa internacional orientado a personas con experiencia o formación previa que desean fortalecer habilidades profesionales mediante entrenamiento práctico en empresas del extranjero.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
-      "options": {
-        "1": "training_requisitos",
-        "2": "charla",
-        "3": "informacion_training"
-      }
-    },
-    "training_requisitos": {
-      "message": "💼 Para participar en Training generalmente necesitas:\n\n✅ Contar con estudios o experiencia relacionada al área\n✅ Tener inglés intermedio o superior\n✅ Tener interés en desarrollar experiencia profesional internacional\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
-      "options": {
-        "1": "training_cumple",
-        "2": "training_no_cumple",
-        "3": "training_no_seguro",
-        "4": "informacion_training"
-      }
-    },
-    "training_cumple": {
-      "message": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Training.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "training_requisitos"
-      }
-    },
-    "training_no_cumple": {
-      "message": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
-      "options": {
-        "1": "informacion_wat",
-        "2": "informacion_internship",
-        "3": "informacion_camp",
-        "4": "informacion_training"
-      }
-    },
-    "training_no_seguro": {
-      "message": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "training_requisitos"
-      }
-    },
-    "informacion_camp": {
-      "program": "Camp Programs",
-      "message": "🏕️ Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es Camp Programs\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
-      "options": {
-        "1": "camp_que_es",
-        "2": "camp_requisitos",
-        "3": "charla",
-        "4": "informacion"
-      }
-    },
-    "camp_que_es": {
-      "message": "🏕️ Camp Programs es un programa internacional que permite trabajar y vivir una experiencia cultural en campamentos de verano en Estados Unidos, mientras desarrollas habilidades, practicas inglés y conoces personas de todo el mundo.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
-      "options": {
-        "1": "camp_requisitos",
-        "2": "charla",
-        "3": "informacion_camp"
-      }
-    },
-    "camp_requisitos": {
-      "message": "🏕️ Para participar en Camp Programs generalmente necesitas:\n\n✅ Tener entre 18 y 26 años\n✅ Tener interés en trabajar con niños, jóvenes o actividades recreativas\n✅ Tener nivel intermedio de inglés o superior\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
-      "options": {
-        "1": "camp_cumple",
-        "2": "camp_no_cumple",
-        "3": "camp_no_seguro",
-        "4": "informacion_camp"
-      }
-    },
-    "camp_cumple": {
-      "message": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Camp Programs.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "camp_requisitos"
-      }
-    },
-    "camp_no_cumple": {
-      "message": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Volver",
-      "options": {
-        "1": "informacion_wat",
-        "2": "informacion_internship",
-        "3": "informacion_training",
-        "4": "informacion_camp"
-      }
-    },
-    "camp_no_seguro": {
-      "message": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "charla",
-        "2": "asesor",
-        "3": "camp_requisitos"
-      }
-    },
-    "charla": {
-      "message": "📌 Perfecto.\n\nPara recibir información sobre próximas charlas, recordatorios y actualizaciones, únete a nuestro grupo oficial de WhatsApp aquí:\n\nhttps://chat.whatsapp.com/CiFNKeW12ef9QKj3szIhqS?s=sw&p=i&mlu=1\n\n¡Bienvenido(a)! ✈️🌎\nNos vemos pronto en una de nuestras próximas charlas informativas.",
-      "end": true
-    },
-    "inscripcion": {
-      "message": "🎉 Excelente. ¿Para qué programa deseas iniciar tu proceso de inscripción?\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Camp Programs 🏕️\n5️⃣ No estoy seguro\n6️⃣ Volver",
-      "options": {
-        "1": "inscripcion_evaluacion",
-        "2": "inscripcion_evaluacion",
-        "3": "inscripcion_evaluacion",
-        "4": "inscripcion_evaluacion",
-        "5": "informacion",
-        "6": "menu_principal"
-      },
-      "programs": {
-        "1": "Work & Travel USA",
-        "2": "Internship",
-        "3": "Training",
-        "4": "Camp Programs"
-      }
-    },
-    "inscripcion_evaluacion": {
-      "message": "🎉 Excelente.\n\nAntes de iniciar tu proceso de inscripción, realizamos una evaluación de inglés para conocer tu nivel y orientarte hacia las mejores oportunidades disponibles.\n\nLa evaluación tiene un costo de USD 50.\n\n¿Que te gustaría hacer?\n\n1️⃣ Más información sobre la evaluación\n2️⃣ Realizar el pago y programar evaluación\n3️⃣ Hablar con un asesor\n4️⃣ Volver",
-      "options": {
-        "1": "evaluacion_info",
-        "2": "evaluacion_pago",
-        "3": "asesor",
-        "4": "inscripcion"
-      }
-    },
-    "evaluacion_info": {
-      "message": "🗣️ La evaluación de inglés se realiza de forma online y tiene una duración aproximada de 30 minutos.\n\nEl resultado nos ayuda a determinar si cumples con el nivel requerido para participar en el programa seleccionado.\n\n📌 En caso de no aprobar en el primer intento, tendrás hasta 2 oportunidades adicionales sin costo extra.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Realizar el pago y programar evaluación\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "evaluacion_pago",
-        "2": "asesor",
-        "3": "inscripcion_evaluacion"
-      }
-    },
-    "evaluacion_pago": {
-      "message": "💳 Perfecto.\n\nPara programar tu evaluación de inglés, realiza el pago de USD 50 utilizando una de las siguientes opciones:\n\n🏦 Depósito o transferencia bancaria en dólares\n\nRazón social:\nBRUCKE PROGRAMS S.A.C.\n\nRUC:\n20615764773\n\nCuenta BCP dólares:\n194-16063395150\n\nCCI dólares:\n002-194-11606339515095\n\n💻 También puedes realizar el pago online aquí (recargo adicional de 5%):\n\nhttps://express.culqi.com/pago/E2824A331C\n\n📌 Luego de realizar el pago, envía tu comprobante o captura por este medio o al correo:\n\ninfo@bruckeprograms.com\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Ya realicé el pago\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
-      "options": {
-        "1": "evaluacion_comprobante",
-        "2": "asesor",
-        "3": "inscripcion_evaluacion"
-      }
-    },
-    "evaluacion_comprobante": {
-      "message": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago (captura o fotografía) o al correo:\n\ninfo@bruckeprograms.com\n\n📌 Una vez validado el pago, recibirás en tu correo electrónico el enlace para realizar tu evaluación de inglés online.\n\nLa evaluación tiene una duración aproximada de 30 minutos.\n\n¡Éxitos! 😊",
-      "human": true,
-      "end": true
-    },
-    "asesor": {
-      "message": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
-      "human_after_next_message": true
-    },
-    "otros": {
-      "message": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
-      "human_after_next_message": true
-    },
-    "participante": {
-      "message": "😊 Perfecto.\n\n¿Sobre qué etapa de tu proceso necesitas ayuda?\n\n1️⃣ Evaluación de inglés\n2️⃣ Pagos\n3️⃣ Documentos\n4️⃣ Empleador / Entrevista\n5️⃣ Visa y viaje\n6️⃣ Otro tema\n7️⃣ Hablar con asesor",
-      "options": {
-        "1": "participante_evaluacion",
-        "2": "participante_pagos",
-        "3": "participante_documentos",
-        "4": "participante_empleador",
-        "5": "participante_visa",
-        "6": "participante_otro",
-        "7": "asesor"
-      }
-    },
-    "participante_evaluacion": {
-      "message": "🗣️ ¿Sobre qué necesitas ayuda?\n\n1️⃣ Aún no recibo mi evaluación\n2️⃣ Ya di mi evaluación y espero resultados\n3️⃣ No aprobé mi evaluación\n4️⃣ Otro tema\n5️⃣ Volver",
-      "options": {
-        "1": "eval_no_recibe",
-        "2": "eval_espera_resultados",
-        "3": "eval_no_aprobo",
-        "4": "participante_otro",
-        "5": "participante"
-      }
-    },
-    "eval_no_recibe": {
-      "message": "📩 Si ya realizaste el pago y enviaste tu comprobante, el enlace de evaluación será enviado a tu correo electrónico.\n\nPor favor revisa también tu bandeja de spam o correo no deseado.\n\nSi ya pasaron más de 24 horas desde que enviaste tu comprobante, escribe tu nombre completo y un asesor revisará tu caso.",
-      "human_after_next_message": true
-    },
-    "eval_espera_resultados": {
-      "message": "📝 Gracias por completar tu evaluación.\n\nLos resultados serán revisados por el equipo de Brücke y se te comunicará el siguiente paso por WhatsApp o correo electrónico.\n\nSi ya pasaron más de 24 horas, escribe tu nombre completo y un asesor revisará tu caso.",
-      "human_after_next_message": true
-    },
-    "eval_no_aprobo": {
-      "message": "😊 No te preocupes.\n\nEn caso de no aprobar en el primer intento, tienes hasta 2 oportunidades adicionales sin costo extra.\n\nEscribe tu nombre completo para que un asesor pueda orientarte sobre tu siguiente intento.",
-      "human_after_next_message": true
-    },
-    "participante_pagos": {
-      "message": "💳 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Primera cuota\n2️⃣ Cuotas pendientes\n3️⃣ Confirmación de pago enviado\n4️⃣ Otro tema\n5️⃣ Volver",
-      "options": {
-        "1": "pago_primera_cuota",
-        "2": "pago_cuotas_pendientes",
-        "3": "pago_confirmacion",
-        "4": "participante_otro",
-        "5": "participante"
-      }
-    },
-    "pago_primera_cuota": {
-      "message": "💳 La primera cuota permite iniciar formalmente tu proceso dentro del programa.\n\nSi deseas avanzar, escribe el programa al que postulas y un asesor te indicará el monto, concepto y pasos correspondientes.",
-      "human_after_next_message": true
-    },
-    "pago_cuotas_pendientes": {
-      "message": "📌 Para revisar tus cuotas pendientes, por favor escribe:\n\n• Nombre completo\n• Programa\n• Cuota que deseas consultar\n\nUn asesor verificará tu estado de pagos y continuará contigo en breve.",
-      "human_after_next_message": true
-    },
-    "pago_confirmacion": {
-      "message": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago o captura.\n\nNuestro equipo validará la información y te confirmará el siguiente paso.",
-      "human_after_next_message": true
-    },
-    "participante_documentos": {
-      "message": "📄 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Documentos requeridos\n2️⃣ Cómo enviar documentos\n3️⃣ Estado de revisión\n4️⃣ Otro tema\n5️⃣ Volver",
-      "options": {
-        "1": "docs_requeridos",
-        "2": "docs_enviar",
-        "3": "docs_estado",
-        "4": "participante_otro",
-        "5": "participante"
-      }
-    },
-    "docs_requeridos": {
-      "message": "📄 Los documentos requeridos pueden variar según el programa y la etapa de tu proceso.\n\nPor favor escribe tu nombre completo y programa para indicarte los documentos correspondientes a tu caso.\n\nTambién puedes enviar consultas o documentos al correo:\n\ninfo@bruckeprograms.com",
-      "human_after_next_message": true
-    },
-    "docs_enviar": {
-      "message": "📤 Puedes enviar tus documentos por este medio o al correo:\n\ninfo@bruckeprograms.com\n\nAsegúrate de que las imágenes o archivos estén completos, legibles y actualizados.\n\nSi tu asesor te indicó un procedimiento diferente, sigue esas indicaciones.",
-      "human_after_next_message": true
-    },
-    "docs_estado": {
-      "message": "🔎 Para revisar el estado de tus documentos, escribe:\n\n• Nombre completo\n• Programa\n• Documento consultado\n\nTambién puedes enviar tu consulta a:\n\ninfo@bruckeprograms.com",
-      "human_after_next_message": true
-    },
-    "participante_empleador": {
-      "message": "💼 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Entrevista con empleador\n2️⃣ Oferta laboral\n3️⃣ Esperando empleador\n4️⃣ Otro tema\n5️⃣ Volver",
-      "options": {
-        "1": "empleador_entrevista",
-        "2": "empleador_oferta",
-        "3": "empleador_esperando",
-        "4": "participante_otro",
-        "5": "participante"
-      }
-    },
-    "empleador_entrevista": {
-      "message": "💼 Si tienes una entrevista con empleador, revisa cuidadosamente la fecha, hora, modalidad y recomendaciones enviadas por Brücke.\n\nSi necesitas ayuda específica, escribe tu nombre completo y el nombre del empleador o posición.",
-      "human_after_next_message": true
-    },
-    "empleador_oferta": {
-      "message": "🎉 Si recibiste una oferta laboral, felicidades.\n\nPor favor envía la información recibida o escribe el nombre del empleador para que un asesor te indique el siguiente paso.",
-      "human_after_next_message": true
-    },
-    "empleador_esperando": {
-      "message": "⏳ Si aún estás esperando empleador, tu perfil sigue en proceso de revisión y búsqueda de oportunidades.\n\nUn asesor te informará cuando exista una actualización relevante para tu caso.",
-      "human_after_next_message": true
-    },
-    "participante_visa": {
-      "message": "✈️ ¿Sobre qué necesitas ayuda?\n\n1️⃣ DS / SEVIS\n2️⃣ Entrevista de visa\n3️⃣ Reserva de vuelo\n4️⃣ Otro tema\n5️⃣ Volver",
-      "options": {
-        "1": "visa_ds_sevis",
-        "2": "visa_entrevista",
-        "3": "visa_vuelo",
-        "4": "participante_otro",
-        "5": "participante"
-      }
-    },
-    "visa_ds_sevis": {
-      "message": "📑 Si tu consulta es sobre DS o SEVIS, por favor escribe tu nombre completo y el documento o paso específico sobre el que tienes dudas.\n\nUn asesor revisará tu caso y te orientará.",
-      "human_after_next_message": true
-    },
-    "visa_entrevista": {
-      "message": "🛂 Si tienes una entrevista de visa programada, revisa la información y recomendaciones enviadas por Brücke.\n\nSi tienes una duda específica, escribe tu nombre completo y la fecha de tu entrevista.",
-      "human_after_next_message": true
-    },
-    "visa_vuelo": {
-      "message": "✈️ Antes de comprar o modificar vuelos, verifica que tu proceso esté listo para viajar según las indicaciones de Brücke.\n\nSi tienes una consulta específica, escribe tu nombre completo, programa y fecha tentativa de viaje.",
-      "human_after_next_message": true
-    },
-    "participante_otro": {
-      "message": "😊 Por favor explícanos brevemente tu consulta.\n\nUn asesor revisará tu mensaje y continuará contigo en breve.",
-      "human_after_next_message": true
+  "menu_principal": {
+    "mensaje": "👋 Hola, bienvenido(a) a Brücke Programs 🌎\n\n¿En qué podemos ayudarte hoy?\n\n1️⃣ Quiero información sobre los programas\n2️⃣ Quiero inscribirme\n3️⃣ Quiero hablar con un asesor\n4️⃣ Ya soy participante y necesito orientación\n5️⃣ Otros temas",
+    "opciones": {
+      "1": "informacion",
+      "2": "inscripcion",
+      "3": "asesor",
+      "4": "participante",
+      "5": "otros"
     }
+  },
+  "informacion": {
+    "mensaje": "🌎 ¿Sobre qué programa deseas informarte?\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Camp Programs 🏕️\n5️⃣ Aún no estoy seguro\n6️⃣ Volver",
+    "opciones": {
+      "1": "informacion_wat",
+      "2": "informacion_internship",
+      "3": "informacion_training",
+      "4": "informacion_camp",
+      "5": "informacion_no_seguro",
+      "6": "menu_principal"
+    }
+  },
+  "informacion_no_seguro": {
+    "mensaje": "😊 No te preocupes. Muchas personas aún no saben qué programa internacional se adapta mejor a su perfil.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "informacion"
+    }
+  },
+  "informacion_wat": {
+    "programa": "Work & Travel USA",
+    "mensaje": "🇺🇸 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es Work & Travel\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
+    "opciones": {
+      "1": "wat_que_es",
+      "2": "wat_requisitos",
+      "3": "charla",
+      "4": "informacion"
+    }
+  },
+  "wat_que_es": {
+    "mensaje": "🌎 Work & Travel USA es un programa de intercambio cultural que permite a estudiantes universitarios trabajar temporalmente en Estados Unidos mientras viven una experiencia internacional, mejoran su inglés y conocen nuevas culturas.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
+    "opciones": {
+      "1": "wat_requisitos",
+      "2": "charla",
+      "3": "informacion_wat"
+    }
+  },
+  "wat_requisitos": {
+    "mensaje": "🇺🇸 Para participar en Work & Travel USA generalmente necesitas:\n\n✅ Tener entre 18 y 28 años\n✅ Estar matriculado(a) en universidad o instituto superior\n✅ Tener un nivel intermedio de inglés o superior\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
+    "opciones": {
+      "1": "wat_cumple",
+      "2": "wat_no_cumple",
+      "3": "wat_no_seguro",
+      "4": "informacion_wat"
+    }
+  },
+  "wat_cumple": {
+    "mensaje": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para el programa Work & Travel USA.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "wat_requisitos"
+    }
+  },
+  "wat_no_cumple": {
+    "mensaje": "🌎 No te preocupes. Existen otros programas internacionales que podrían adaptarse mejor a tu perfil.\n\n¿Sobre cuál te gustaría recibir información?\n\n1️⃣ Internship 🌍\n2️⃣ Training 💼\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
+    "opciones": {
+      "1": "informacion_internship",
+      "2": "informacion_training",
+      "3": "informacion_camp",
+      "4": "informacion_wat"
+    }
+  },
+  "wat_no_seguro": {
+    "mensaje": "😊 No te preocupes. Muchos participantes tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "wat_requisitos"
+    }
+  },
+  "informacion_internship": {
+    "programa": "Internship",
+    "mensaje": "🌍 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es el programa Internship\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
+    "opciones": {
+      "1": "internship_que_es",
+      "2": "internship_requisitos",
+      "3": "charla",
+      "4": "informacion"
+    }
+  },
+  "internship_que_es": {
+    "mensaje": "🌍 Internship es un programa internacional que permite realizar prácticas profesionales en empresas del extranjero relacionadas con tu carrera o experiencia, mientras desarrollas habilidades y fortaleces tu perfil profesional.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
+    "opciones": {
+      "1": "internship_requisitos",
+      "2": "charla",
+      "3": "informacion_internship"
+    }
+  },
+  "internship_requisitos": {
+    "mensaje": "🌍 Para participar en Internship generalmente necesitas:\n\n✅ Tener estudios universitarios o experiencia relacionada al área\n✅ Contar con inglés intermedio o superior\n✅ Tener interés en adquirir experiencia profesional internacional\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
+    "opciones": {
+      "1": "internship_cumple",
+      "2": "internship_no_cumple",
+      "3": "internship_no_seguro",
+      "4": "informacion_internship"
+    }
+  },
+  "internship_cumple": {
+    "mensaje": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Internship.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "internship_requisitos"
+    }
+  },
+  "internship_no_cumple": {
+    "mensaje": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Training 💼\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
+    "opciones": {
+      "1": "informacion_wat",
+      "2": "informacion_training",
+      "3": "informacion_camp",
+      "4": "informacion_internship"
+    }
+  },
+  "internship_no_seguro": {
+    "mensaje": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "internship_requisitos"
+    }
+  },
+  "informacion_training": {
+    "programa": "Training",
+    "mensaje": "💼 Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es el programa Training\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
+    "opciones": {
+      "1": "training_que_es",
+      "2": "training_requisitos",
+      "3": "charla",
+      "4": "informacion"
+    }
+  },
+  "training_que_es": {
+    "mensaje": "💼 Training es un programa internacional orientado a personas con experiencia o formación previa que desean fortalecer habilidades profesionales mediante entrenamiento práctico en empresas del extranjero.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
+    "opciones": {
+      "1": "training_requisitos",
+      "2": "charla",
+      "3": "informacion_training"
+    }
+  },
+  "training_requisitos": {
+    "mensaje": "💼 Para participar en Training generalmente necesitas:\n\n✅ Contar con estudios o experiencia relacionada al área\n✅ Tener inglés intermedio o superior\n✅ Tener interés en desarrollar experiencia profesional internacional\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
+    "opciones": {
+      "1": "training_cumple",
+      "2": "training_no_cumple",
+      "3": "training_no_seguro",
+      "4": "informacion_training"
+    }
+  },
+  "training_cumple": {
+    "mensaje": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Training.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "training_requisitos"
+    }
+  },
+  "training_no_cumple": {
+    "mensaje": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Camp Programs 🏕️\n4️⃣ Volver",
+    "opciones": {
+      "1": "informacion_wat",
+      "2": "informacion_internship",
+      "3": "informacion_camp",
+      "4": "informacion_training"
+    }
+  },
+  "training_no_seguro": {
+    "mensaje": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "training_requisitos"
+    }
+  },
+  "informacion_camp": {
+    "programa": "Camp Programs",
+    "mensaje": "🏕️ Perfecto. ¿Qué te gustaría hacer?\n\n1️⃣ Conocer qué es Camp Programs\n2️⃣ Revisar si cumplo con los requisitos\n3️⃣ Participar en una charla informativa\n4️⃣ Volver",
+    "opciones": {
+      "1": "camp_que_es",
+      "2": "camp_requisitos",
+      "3": "charla",
+      "4": "informacion"
+    }
+  },
+  "camp_que_es": {
+    "mensaje": "🏕️ Camp Programs es un programa internacional que permite trabajar y vivir una experiencia cultural en campamentos de verano en Estados Unidos, mientras desarrollas habilidades, practicas inglés y conoces personas de todo el mundo.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Revisar si cumplo con los requisitos\n2️⃣ Participar en una charla informativa\n3️⃣ Volver",
+    "opciones": {
+      "1": "camp_requisitos",
+      "2": "charla",
+      "3": "informacion_camp"
+    }
+  },
+  "camp_requisitos": {
+    "mensaje": "🏕️ Para participar en Camp Programs generalmente necesitas:\n\n✅ Tener entre 18 y 26 años\n✅ Tener interés en trabajar con niños, jóvenes o actividades recreativas\n✅ Tener nivel intermedio de inglés o superior\n\n¿Consideras que cumples con estos requisitos?\n\n1️⃣ Sí, cumplo con todos o la mayoría\n2️⃣ No cumplo con uno o más requisitos\n3️⃣ No estoy seguro(a)\n4️⃣ Volver",
+    "opciones": {
+      "1": "camp_cumple",
+      "2": "camp_no_cumple",
+      "3": "camp_no_seguro",
+      "4": "informacion_camp"
+    }
+  },
+  "camp_cumple": {
+    "mensaje": "🎉 Excelente. Según tus respuestas, podrías ser candidato(a) para Camp Programs.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "camp_requisitos"
+    }
+  },
+  "camp_no_cumple": {
+    "mensaje": "🌎 No te preocupes. Otros programas podrían adaptarse mejor a tu perfil.\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Volver",
+    "opciones": {
+      "1": "informacion_wat",
+      "2": "informacion_internship",
+      "3": "informacion_training",
+      "4": "informacion_camp"
+    }
+  },
+  "camp_no_seguro": {
+    "mensaje": "😊 No te preocupes. Muchas personas tienen dudas al inicio.\n\nEl siguiente paso recomendado es:\n\n1️⃣ Participar en una charla informativa\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "charla",
+      "2": "asesor",
+      "3": "camp_requisitos"
+    }
+  },
+  "charla": {
+    "mensaje": "📌 Perfecto.\n\nPara recibir información sobre próximas charlas, recordatorios y actualizaciones, únete a nuestro grupo oficial de WhatsApp aquí:\n\nhttps://chat.whatsapp.com/CiFNKeW12ef9QKj3szIhqS?s=sw&p=i&mlu=1\n\n¡Bienvenido(a)! ✈️🌎\nNos vemos pronto en una de nuestras próximas charlas informativas.",
+    "fin": true
+  },
+  "inscripcion": {
+    "mensaje": "🎉 Excelente. ¿Para qué programa deseas iniciar tu proceso de inscripción?\n\n1️⃣ Work & Travel USA 🇺🇸\n2️⃣ Internship 🌍\n3️⃣ Training 💼\n4️⃣ Camp Programs 🏕️\n5️⃣ No estoy seguro\n6️⃣ Volver",
+    "opciones": {
+      "1": "inscripcion_evaluacion",
+      "2": "inscripcion_evaluacion",
+      "3": "inscripcion_evaluacion",
+      "4": "inscripcion_evaluacion",
+      "5": "informacion",
+      "6": "menu_principal"
+    }
+  },
+  "inscripcion_evaluacion": {
+    "mensaje": "🎉 Excelente.\n\nAntes de iniciar tu proceso de inscripción, realizamos una evaluación de inglés para conocer tu nivel y orientarte hacia las mejores oportunidades disponibles.\n\nLa evaluación tiene un costo de USD 50.\n\n¿Que te gustaría hacer?\n\n1️⃣ Más información sobre la evaluación\n2️⃣ Realizar el pago y programar evaluación\n3️⃣ Hablar con un asesor\n4️⃣ Volver",
+    "opciones": {
+      "1": "evaluacion_info",
+      "2": "evaluacion_pago",
+      "3": "asesor",
+      "4": "inscripcion"
+    }
+  },
+  "evaluacion_info": {
+    "mensaje": "🗣️ La evaluación de inglés se realiza de forma online y tiene una duración aproximada de 30 minutos.\n\nEl resultado nos ayuda a determinar si cumples con el nivel requerido para participar en el programa seleccionado.\n\n📌 En caso de no aprobar en el primer intento, tendrás hasta 2 oportunidades adicionales sin costo extra.\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Realizar el pago y programar evaluación\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "evaluacion_pago",
+      "2": "asesor",
+      "3": "inscripcion_evaluacion"
+    }
+  },
+  "evaluacion_pago": {
+    "mensaje": "💳 Perfecto.\n\nPara programar tu evaluación de inglés, realiza el pago de USD 50 utilizando una de las siguientes opciones:\n\n🏦 Depósito o transferencia bancaria en dólares\n\nRazón social:\nBRUCKE PROGRAMS S.A.C.\n\nRUC:\n20615764773\n\nCuenta BCP dólares:\n194-16063395150\n\nCCI dólares:\n002-194-11606339515095\n\n💻 También puedes realizar el pago online aquí. Considera que tiene un recargo adicional de 5%:\n\nhttps://express.culqi.com/pago/E2824A331C\n\n📌 Luego de realizar el pago, envía tu comprobante o captura por este medio o al correo:\n\ninfo@bruckeprograms.com\n\n¿Que te gustaría hacer ahora?\n\n1️⃣ Ya realicé el pago\n2️⃣ Hablar con un asesor\n3️⃣ Volver",
+    "opciones": {
+      "1": "evaluacion_pago_realizado",
+      "2": "asesor",
+      "3": "inscripcion_evaluacion"
+    }
+  },
+  "evaluacion_pago_realizado": {
+    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago, captura o fotografía, o al correo:\n\ninfo@bruckeprograms.com\n\n📌 Una vez validado el pago, recibirás en tu correo electrónico el enlace para realizar tu evaluación de inglés online.\n\nLa evaluación tiene una duración aproximada de 30 minutos.\n\n¡Éxitos! 😊",
+    "fin": true
+  },
+  "asesor": {
+    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
+    "modoAsesor": true
+  },
+  "otros": {
+    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
+    "modoAsesor": true
+  },
+  "participante": {
+    "mensaje": "😊 Perfecto.\n\n¿Sobre qué etapa de tu proceso necesitas ayuda?\n\n1️⃣ Evaluación de inglés\n2️⃣ Pagos\n3️⃣ Documentos\n4️⃣ Empleador / Entrevista\n5️⃣ Visa y viaje\n6️⃣ Otro tema\n7️⃣ Hablar con un asesor",
+    "opciones": {
+      "1": "participante_evaluacion",
+      "2": "participante_pagos",
+      "3": "participante_documentos",
+      "4": "participante_empleador",
+      "5": "participante_visa",
+      "6": "otros",
+      "7": "asesor"
+    }
+  },
+  "participante_evaluacion": {
+    "mensaje": "🗣️ ¿Sobre qué necesitas ayuda?\n\n1️⃣ Aún no recibo mi evaluación\n2️⃣ Ya di mi evaluación y espero resultados\n3️⃣ No aprobé mi evaluación\n4️⃣ Otro tema\n5️⃣ Volver",
+    "opciones": {
+      "1": "eval_no_recibo",
+      "2": "eval_resultados",
+      "3": "eval_no_aprobe",
+      "4": "otros",
+      "5": "participante"
+    }
+  },
+  "eval_no_recibo": {
+    "mensaje": "📩 Si ya realizaste el pago y enviaste tu comprobante, el enlace de evaluación será enviado a tu correo electrónico.\n\nPor favor revisa también tu bandeja de spam o correo no deseado.\n\nSi ya pasaron más de 24 horas desde que enviaste tu comprobante, escribe tu nombre completo y un asesor revisará tu caso.",
+    "modoAsesor": true
+  },
+  "eval_resultados": {
+    "mensaje": "📝 Gracias por completar tu evaluación.\n\nLos resultados serán revisados por el equipo de Brücke y se te comunicará el siguiente paso por WhatsApp o correo electrónico.\n\nSi ya pasaron más de 24 horas, escribe tu nombre completo y un asesor revisará tu caso.",
+    "modoAsesor": true
+  },
+  "eval_no_aprobe": {
+    "mensaje": "😊 No te preocupes.\n\nEn caso de no aprobar en el primer intento, tienes hasta 2 oportunidades adicionales sin costo extra.\n\nEscribe tu nombre completo para que un asesor pueda orientarte sobre tu siguiente intento.",
+    "modoAsesor": true
+  },
+  "participante_pagos": {
+    "mensaje": "💳 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Primera cuota\n2️⃣ Cuotas pendientes\n3️⃣ Confirmación de pago enviado\n4️⃣ Otro tema\n5️⃣ Volver",
+    "opciones": {
+      "1": "pagos_primera_cuota",
+      "2": "pagos_cuotas_pendientes",
+      "3": "pagos_confirmacion",
+      "4": "otros",
+      "5": "participante"
+    }
+  },
+  "pagos_primera_cuota": {
+    "mensaje": "💳 La primera cuota permite iniciar formalmente tu proceso dentro del programa.\n\nSi deseas avanzar, escribe el programa al que postulas y un asesor te indicará el monto, concepto y pasos correspondientes.",
+    "modoAsesor": true
+  },
+  "pagos_cuotas_pendientes": {
+    "mensaje": "📌 Para revisar tus cuotas pendientes, por favor escribe:\n\n• Nombre completo\n• Programa\n• Cuota que deseas consultar\n\nUn asesor verificará tu estado de pagos y continuará contigo en breve.",
+    "modoAsesor": true
+  },
+  "pagos_confirmacion": {
+    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago o captura.\n\nNuestro equipo validará la información y te confirmará el siguiente paso.",
+    "modoAsesor": true
+  },
+  "participante_documentos": {
+    "mensaje": "📄 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Documentos requeridos\n2️⃣ Cómo enviar documentos\n3️⃣ Estado de revisión\n4️⃣ Otro tema\n5️⃣ Volver",
+    "opciones": {
+      "1": "docs_requeridos",
+      "2": "docs_enviar",
+      "3": "docs_estado",
+      "4": "otros",
+      "5": "participante"
+    }
+  },
+  "docs_requeridos": {
+    "mensaje": "📄 Los documentos requeridos pueden variar según el programa y la etapa de tu proceso.\n\nPor favor escribe tu nombre completo y programa para indicarte los documentos correspondientes a tu caso.\n\nTambién puedes enviar consultas o documentos al correo:\n\ninfo@bruckeprograms.com",
+    "modoAsesor": true
+  },
+  "docs_enviar": {
+    "mensaje": "📤 Puedes enviar tus documentos por este medio o al correo:\n\ninfo@bruckeprograms.com\n\nAsegúrate de que las imágenes o archivos estén completos, legibles y actualizados.\n\nSi tu asesor te indicó un procedimiento diferente, sigue esas indicaciones.",
+    "modoAsesor": true
+  },
+  "docs_estado": {
+    "mensaje": "🔎 Para revisar el estado de tus documentos, por favor escribe:\n\n• Nombre completo\n• Programa\n• Documento sobre el que deseas consultar\n\nTambién puedes enviar tu consulta a:\n\ninfo@bruckeprograms.com\n\nUn asesor verificará tu caso.",
+    "modoAsesor": true
+  },
+  "participante_empleador": {
+    "mensaje": "💼 ¿Sobre qué necesitas ayuda?\n\n1️⃣ Entrevista con empleador\n2️⃣ Oferta laboral\n3️⃣ Esperando empleador\n4️⃣ Otro tema\n5️⃣ Volver",
+    "opciones": {
+      "1": "emp_entrevista",
+      "2": "emp_oferta",
+      "3": "emp_esperando",
+      "4": "otros",
+      "5": "participante"
+    }
+  },
+  "emp_entrevista": {
+    "mensaje": "💼 Si tienes una entrevista con empleador, revisa cuidadosamente la fecha, hora, modalidad y recomendaciones enviadas por Brücke.\n\nSi necesitas ayuda específica, escribe tu nombre completo y el nombre del empleador o posición.",
+    "modoAsesor": true
+  },
+  "emp_oferta": {
+    "mensaje": "🎉 Si recibiste una oferta laboral, felicidades.\n\nPor favor envía la información recibida o escribe el nombre del empleador para que un asesor te indique el siguiente paso.",
+    "modoAsesor": true
+  },
+  "emp_esperando": {
+    "mensaje": "⏳ Si aún estás esperando empleador, tu perfil sigue en proceso de revisión y búsqueda de oportunidades.\n\nUn asesor te informará cuando exista una actualización relevante para tu caso.",
+    "modoAsesor": true
+  },
+  "participante_visa": {
+    "mensaje": "✈️ ¿Sobre qué necesitas ayuda?\n\n1️⃣ DS / SEVIS\n2️⃣ Entrevista de visa\n3️⃣ Reserva de vuelo\n4️⃣ Otro tema\n5️⃣ Volver",
+    "opciones": {
+      "1": "visa_ds",
+      "2": "visa_entrevista",
+      "3": "visa_vuelo",
+      "4": "otros",
+      "5": "participante"
+    }
+  },
+  "visa_ds": {
+    "mensaje": "📑 Si tu consulta es sobre DS o SEVIS, por favor escribe tu nombre completo y el documento o paso específico sobre el que tienes dudas.\n\nUn asesor revisará tu caso y te orientará.",
+    "modoAsesor": true
+  },
+  "visa_entrevista": {
+    "mensaje": "🛂 Si tienes una entrevista de visa programada, revisa la información y recomendaciones enviadas por Brücke.\n\nSi tienes una duda específica, escribe tu nombre completo y la fecha de tu entrevista.",
+    "modoAsesor": true
+  },
+  "visa_vuelo": {
+    "mensaje": "✈️ Antes de comprar o modificar vuelos, verifica que tu proceso esté listo para viajar según las indicaciones de Brücke.\n\nSi tienes una consulta específica, escribe tu nombre completo, programa y fecha tentativa de viaje.",
+    "modoAsesor": true
   }
 }
