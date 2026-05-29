@@ -280,14 +280,14 @@
     "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago, captura o fotografía, o al correo:\n\ninfo@bruckeprograms.com\n\n📌 Una vez validado el pago, recibirás en tu correo electrónico el enlace para realizar tu evaluación de inglés online.\n\nLa evaluación tiene una duración aproximada de 30 minutos.\n\n¡Éxitos! 😊",
     "fin": true
   },
-  "asesor": {
-    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
-    "modoAsesor": true
-  },
-  "otros": {
-    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\nGracias por contactar a Brücke Programs 🌎",
-    "modoAsesor": true
-  },
+"asesor": {
+  "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
+  "modoAsesor": true
+},
+"otros": {
+  "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
+  "modoAsesor": true
+},
   "participante": {
     "mensaje": "😊 Perfecto.\n\n¿Sobre qué etapa de tu proceso necesitas ayuda?\n\n1️⃣ Evaluación de inglés\n2️⃣ Pagos\n3️⃣ Documentos\n4️⃣ Empleador / Entrevista\n5️⃣ Visa y viaje\n6️⃣ Otro tema\n7️⃣ Hablar con un asesor",
     "opciones": {
