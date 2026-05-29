@@ -6,10 +6,11 @@ const app = express();
 app.use(express.json());
 
 const VERIFY_TOKEN = "brucke123";
-const ACCESS_TOKEN = "EAAOOoHrGr4wBRpiM7Y9xkbrxMmfyby6dWQrJnRep3c5mpMfwKrke6YZCYWb5KphegkPlvuGv6C23Pg0plhlyw84q0Xrik3ipF3HketcUZCfAWAZCQzrOo0joCJ7mBgpbGfcPxFYZBPZAh92vIm9B3Hb2DPB07dkqKmo1nudFJZBMz5BrmI6csKtnnwj7yZBrdhsjzcPnwLCTzf8fXXvolGYZCZC7u9LMDkrHFLc813wrkRRqGxgDh8VeRqifMZCPqiysWtd1RjaJw9KKjQcibkJ1BrZCpsT5xfETPYuTTW9";
+const ACCESS_TOKEN = "EAAOOoHrGr4wBRiYV3roC54xMTGDy1dMZCu1S8DBxWF1xg9bH0MjO5RC4ioyRXs5YXprmLXrKh8BM0SGMwZCJZCsN5VnZAAgKXxuftse3XZAa7qkcimfgmN7m5zeRhjR8kGlIZA14VZCpPHTtXtNEXGh2W5zqZBMm2yUs4jaj3wJlZCp2EM92hv5TNiVrSqaabOgQbtN00XSCyN9QjBPQxmSVjMKFiHAk5G9OYnNZCkPEo2MfiZA1cMXuWzFKBVxCmrZCxq6agDrtXQKs0JwjVxQbTbACc9SwZCfdxCgeJG7QZD";
 const PHONE_NUMBER_ID = "1171925102662702";
 
 const sesiones = {};
+const mensajesProcesados = {};
 const DOS_HORAS = 2 * 60 * 60 * 1000;
 
 app.get("/", (req, res) => {
@@ -63,6 +64,14 @@ function esReset(texto) {
   return ["menu", "menú", "inicio", "reiniciar", "volver al inicio"].includes(t);
 }
 
+function esCerrar(texto) {
+  return texto.trim().toLowerCase() === "#cerrar";
+}
+
+function mensajeNoEntendido() {
+  return "😅 No logré entender tu mensaje.\n\nPor favor selecciona una opción del menú actual o escribe *menu* para volver al menú principal.";
+}
+
 function respuestaArchivo() {
   return "📎 Hemos recibido un archivo o documento.\n\nPara asegurar una correcta revisión, los documentos, comprobantes o archivos deben enviarse por uno de estos medios:\n\n📩 Correo:\ninfo@bruckeprograms.com\n\nO\n\n📲 WhatsApp directo con tu asesor personal de Brücke, si ya tienes uno asignado.\n\nSi aún no tienes asesor asignado, escribe *asesor* y te orientaremos.";
 }
@@ -70,6 +79,15 @@ function respuestaArchivo() {
 function procesarTexto(numero, texto) {
   const sesion = obtenerSesion(numero);
   const mensaje = texto.trim().toLowerCase();
+
+  if (esCerrar(mensaje)) {
+    sesion.estado = "menu_principal";
+    sesion.modoAsesor = false;
+    sesion.errores = 0;
+    sesion.primerContacto = true;
+    actualizarTiempo(sesion);
+    return null;
+  }
 
   if (esReset(mensaje)) {
     sesion.estado = "menu_principal";
@@ -111,22 +129,15 @@ function procesarTexto(numero, texto) {
   const siguienteEstado = estadoActual.opciones?.[mensaje];
 
   if (!siguienteEstado) {
-    // Si está en inicio, cualquier mensaje abre el menú principal.
-    if (sesion.estado === "menu_principal") {
-      sesion.errores = 0;
-      actualizarTiempo(sesion);
-      return content["menu_principal"].mensaje;
-    }
-
     sesion.errores += 1;
     actualizarTiempo(sesion);
 
     if (sesion.errores >= 3) {
       sesion.modoAsesor = true;
-      return "😊 Parece que necesitas ayuda adicional.\n\nPor favor explícanos brevemente tu consulta y un asesor continuará contigo en breve.";
+      return "😊 Parece que necesitas ayuda adicional.\n\nPor favor explícanos brevemente tu consulta y un asesor continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.";
     }
 
-    return "😅 No logré entender tu mensaje.\n\nSi deseas volver al inicio, escribe *menu* y con gusto te ayudaremos.";
+    return mensajeNoEntendido();
   }
 
   sesion.errores = 0;
@@ -149,8 +160,7 @@ function procesarTexto(numero, texto) {
   }
 
   if (nuevoEstado.fin) {
-    sesion.estado = "menu_principal";
-    sesion.primerContacto = true;
+    sesion.modoAsesor = true;
   }
 
   actualizarTiempo(sesion);
@@ -179,6 +189,16 @@ app.post("/webhook", async (req, res) => {
     const message = req.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0];
 
     if (message) {
+      const messageId = message.id;
+
+      if (messageId && mensajesProcesados[messageId]) {
+        return res.sendStatus(200);
+      }
+
+      if (messageId) {
+        mensajesProcesados[messageId] = true;
+      }
+
       const from = message.from;
       let respuesta = null;
 
