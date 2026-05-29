@@ -237,7 +237,7 @@
     }
   },
   "charla": {
-    "mensaje": "📌 Perfecto.\n\nPara recibir información sobre próximas charlas, recordatorios y actualizaciones, únete a nuestro grupo oficial de WhatsApp aquí:\n\nhttps://chat.whatsapp.com/CiFNKeW12ef9QKj3szIhqS?s=sw&p=i&mlu=1\n\n¡Bienvenido(a)! ✈️🌎\nNos vemos pronto en una de nuestras próximas charlas informativas.",
+    "mensaje": "📌 Perfecto.\n\nPara recibir información sobre próximas charlas, recordatorios y actualizaciones, únete a nuestro grupo oficial de WhatsApp aquí:\n\nhttps://chat.whatsapp.com/CiFNKeW12ef9QKj3szIhqS?s=sw&p=i&mlu=1\n\n¡Bienvenido(a)! ✈️🌎\nNos vemos pronto en una de nuestras próximas charlas informativas.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "fin": true
   },
   "inscripcion": {
@@ -277,17 +277,17 @@
     }
   },
   "evaluacion_pago_realizado": {
-    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago, captura o fotografía, o al correo:\n\ninfo@bruckeprograms.com\n\n📌 Una vez validado el pago, recibirás en tu correo electrónico el enlace para realizar tu evaluación de inglés online.\n\nLa evaluación tiene una duración aproximada de 30 minutos.\n\n¡Éxitos! 😊",
+    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago, captura o fotografía, o al correo:\n\ninfo@bruckeprograms.com\n\n📌 Una vez validado el pago, recibirás en tu correo electrónico el enlace para realizar tu evaluación de inglés online.\n\nLa evaluación tiene una duración aproximada de 30 minutos.\n\n¡Éxitos! 😊\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "fin": true
   },
-"asesor": {
-  "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
-  "modoAsesor": true
-},
-"otros": {
-  "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
-  "modoAsesor": true
-},
+  "asesor": {
+    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o en qué podemos ayudarte.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
+    "modoAsesor": true
+  },
+  "otros": {
+    "mensaje": "😊 Perfecto.\n\nPor favor, explícanos brevemente tu consulta o el tema sobre el que necesitas ayuda.\n\nUno de nuestros asesores revisará tu mensaje y continuará contigo en breve.\n\n📌 Si deseas volver a ver las opciones del bot, escribe *menu* en cualquier momento.\n\nGracias por contactar a Brücke Programs 🌎",
+    "modoAsesor": true
+  },
   "participante": {
     "mensaje": "😊 Perfecto.\n\n¿Sobre qué etapa de tu proceso necesitas ayuda?\n\n1️⃣ Evaluación de inglés\n2️⃣ Pagos\n3️⃣ Documentos\n4️⃣ Empleador / Entrevista\n5️⃣ Visa y viaje\n6️⃣ Otro tema\n7️⃣ Hablar con un asesor",
     "opciones": {
@@ -311,15 +311,15 @@
     }
   },
   "eval_no_recibo": {
-    "mensaje": "📩 Si ya realizaste el pago y enviaste tu comprobante, el enlace de evaluación será enviado a tu correo electrónico.\n\nPor favor revisa también tu bandeja de spam o correo no deseado.\n\nSi ya pasaron más de 24 horas desde que enviaste tu comprobante, escribe tu nombre completo y un asesor revisará tu caso.",
+    "mensaje": "📩 Si ya realizaste el pago y enviaste tu comprobante, el enlace de evaluación será enviado a tu correo electrónico.\n\nPor favor revisa también tu bandeja de spam o correo no deseado.\n\nSi ya pasaron más de 24 horas desde que enviaste tu comprobante, escribe tu nombre completo y un asesor revisará tu caso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "eval_resultados": {
-    "mensaje": "📝 Gracias por completar tu evaluación.\n\nLos resultados serán revisados por el equipo de Brücke y se te comunicará el siguiente paso por WhatsApp o correo electrónico.\n\nSi ya pasaron más de 24 horas, escribe tu nombre completo y un asesor revisará tu caso.",
+    "mensaje": "📝 Gracias por completar tu evaluación.\n\nLos resultados serán revisados por el equipo de Brücke y se te comunicará el siguiente paso por WhatsApp o correo electrónico.\n\nSi ya pasaron más de 24 horas, escribe tu nombre completo y un asesor revisará tu caso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "eval_no_aprobe": {
-    "mensaje": "😊 No te preocupes.\n\nEn caso de no aprobar en el primer intento, tienes hasta 2 oportunidades adicionales sin costo extra.\n\nEscribe tu nombre completo para que un asesor pueda orientarte sobre tu siguiente intento.",
+    "mensaje": "😊 No te preocupes.\n\nEn caso de no aprobar en el primer intento, tienes hasta 2 oportunidades adicionales sin costo extra.\n\nEscribe tu nombre completo para que un asesor pueda orientarte sobre tu siguiente intento.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "participante_pagos": {
@@ -333,15 +333,15 @@
     }
   },
   "pagos_primera_cuota": {
-    "mensaje": "💳 La primera cuota permite iniciar formalmente tu proceso dentro del programa.\n\nSi deseas avanzar, escribe el programa al que postulas y un asesor te indicará el monto, concepto y pasos correspondientes.",
+    "mensaje": "💳 La primera cuota permite iniciar formalmente tu proceso dentro del programa.\n\nSi deseas avanzar, escribe el programa al que postulas y un asesor te indicará el monto, concepto y pasos correspondientes.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "pagos_cuotas_pendientes": {
-    "mensaje": "📌 Para revisar tus cuotas pendientes, por favor escribe:\n\n• Nombre completo\n• Programa\n• Cuota que deseas consultar\n\nUn asesor verificará tu estado de pagos y continuará contigo en breve.",
+    "mensaje": "📌 Para revisar tus cuotas pendientes, por favor escribe:\n\n• Nombre completo\n• Programa\n• Cuota que deseas consultar\n\nUn asesor verificará tu estado de pagos y continuará contigo en breve.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "pagos_confirmacion": {
-    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago o captura.\n\nNuestro equipo validará la información y te confirmará el siguiente paso.",
+    "mensaje": "🎉 Perfecto.\n\nPor favor envía aquí tu comprobante de pago o captura.\n\nNuestro equipo validará la información y te confirmará el siguiente paso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "participante_documentos": {
@@ -355,15 +355,15 @@
     }
   },
   "docs_requeridos": {
-    "mensaje": "📄 Los documentos requeridos pueden variar según el programa y la etapa de tu proceso.\n\nPor favor escribe tu nombre completo y programa para indicarte los documentos correspondientes a tu caso.\n\nTambién puedes enviar consultas o documentos al correo:\n\ninfo@bruckeprograms.com",
+    "mensaje": "📄 Los documentos requeridos pueden variar según el programa y la etapa de tu proceso.\n\nPor favor escribe tu nombre completo y programa para indicarte los documentos correspondientes a tu caso.\n\nTambién puedes enviar consultas o documentos al correo:\n\ninfo@bruckeprograms.com\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "docs_enviar": {
-    "mensaje": "📤 Puedes enviar tus documentos por este medio o al correo:\n\ninfo@bruckeprograms.com\n\nAsegúrate de que las imágenes o archivos estén completos, legibles y actualizados.\n\nSi tu asesor te indicó un procedimiento diferente, sigue esas indicaciones.",
+    "mensaje": "📤 Puedes enviar tus documentos por este medio o al correo:\n\ninfo@bruckeprograms.com\n\nAsegúrate de que las imágenes o archivos estén completos, legibles y actualizados.\n\nSi tu asesor te indicó un procedimiento diferente, sigue esas indicaciones.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "docs_estado": {
-    "mensaje": "🔎 Para revisar el estado de tus documentos, por favor escribe:\n\n• Nombre completo\n• Programa\n• Documento sobre el que deseas consultar\n\nTambién puedes enviar tu consulta a:\n\ninfo@bruckeprograms.com\n\nUn asesor verificará tu caso.",
+    "mensaje": "🔎 Para revisar el estado de tus documentos, por favor escribe:\n\n• Nombre completo\n• Programa\n• Documento sobre el que deseas consultar\n\nTambién puedes enviar tu consulta a:\n\ninfo@bruckeprograms.com\n\nUn asesor verificará tu caso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "participante_empleador": {
@@ -377,15 +377,15 @@
     }
   },
   "emp_entrevista": {
-    "mensaje": "💼 Si tienes una entrevista con empleador, revisa cuidadosamente la fecha, hora, modalidad y recomendaciones enviadas por Brücke.\n\nSi necesitas ayuda específica, escribe tu nombre completo y el nombre del empleador o posición.",
+    "mensaje": "💼 Si tienes una entrevista con empleador, revisa cuidadosamente la fecha, hora, modalidad y recomendaciones enviadas por Brücke.\n\nSi necesitas ayuda específica, escribe tu nombre completo y el nombre del empleador o posición.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "emp_oferta": {
-    "mensaje": "🎉 Si recibiste una oferta laboral, felicidades.\n\nPor favor envía la información recibida o escribe el nombre del empleador para que un asesor te indique el siguiente paso.",
+    "mensaje": "🎉 Si recibiste una oferta laboral, felicidades.\n\nPor favor envía la información recibida o escribe el nombre del empleador para que un asesor te indique el siguiente paso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "emp_esperando": {
-    "mensaje": "⏳ Si aún estás esperando empleador, tu perfil sigue en proceso de revisión y búsqueda de oportunidades.\n\nUn asesor te informará cuando exista una actualización relevante para tu caso.",
+    "mensaje": "⏳ Si aún estás esperando empleador, tu perfil sigue en proceso de revisión y búsqueda de oportunidades.\n\nUn asesor te informará cuando exista una actualización relevante para tu caso.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "participante_visa": {
@@ -399,15 +399,15 @@
     }
   },
   "visa_ds": {
-    "mensaje": "📑 Si tu consulta es sobre DS o SEVIS, por favor escribe tu nombre completo y el documento o paso específico sobre el que tienes dudas.\n\nUn asesor revisará tu caso y te orientará.",
+    "mensaje": "📑 Si tu consulta es sobre DS o SEVIS, por favor escribe tu nombre completo y el documento o paso específico sobre el que tienes dudas.\n\nUn asesor revisará tu caso y te orientará.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "visa_entrevista": {
-    "mensaje": "🛂 Si tienes una entrevista de visa programada, revisa la información y recomendaciones enviadas por Brücke.\n\nSi tienes una duda específica, escribe tu nombre completo y la fecha de tu entrevista.",
+    "mensaje": "🛂 Si tienes una entrevista de visa programada, revisa la información y recomendaciones enviadas por Brücke.\n\nSi tienes una duda específica, escribe tu nombre completo y la fecha de tu entrevista.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   },
   "visa_vuelo": {
-    "mensaje": "✈️ Antes de comprar o modificar vuelos, verifica que tu proceso esté listo para viajar según las indicaciones de Brücke.\n\nSi tienes una consulta específica, escribe tu nombre completo, programa y fecha tentativa de viaje.",
+    "mensaje": "✈️ Antes de comprar o modificar vuelos, verifica que tu proceso esté listo para viajar según las indicaciones de Brücke.\n\nSi tienes una consulta específica, escribe tu nombre completo, programa y fecha tentativa de viaje.\n\n📌 Si deseas volver al menú principal, escribe *menu*.",
     "modoAsesor": true
   }
 }
